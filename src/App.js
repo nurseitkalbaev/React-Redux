@@ -13,15 +13,19 @@ function App() {
     dispatch(actions.decrement());
   };
   const addBy = () => {
-    dispatch(actions.addBy(10));
+    dispatch(actions.addBy(20));
+  };
+  const removeBy = () => {
+    dispatch(actions.removeBy(10));
   };
 
   return (
     <div>
       <h1>Counter App</h1>
       <h2>{counter}</h2>
-      <button onClick={increment}>Increment</button>
+      <button onClick={removeBy}>RemoveBy</button>
       <button onClick={decrement}>Decrement</button>
+      <button onClick={increment}>Increment</button>
       <button onClick={addBy}>AddBy</button>
     </div>
   );
